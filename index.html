@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB36IGiLm0XoiT6f9hS2G2ph2926IX9ey4&callback=initMap"></script>
+    <title>Los Pollos Hermanos</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul>
+          <li><a href="#hero">Info</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+        <div id="cart-container">
+          <img src="./burger-icon.ico" alt="Cart Icon">
+          <span id="cart-count"></span>
+        </div>
+      </nav>
+    </header>
+    
+    <!-- Pop up for cart -->
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Your Cart</h2>
+          <ul id="cart-items"></ul>
+          <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+          <button id="clear-cart">Clear Cart</button>
+      </div>
+    </div>
+    
+    <!-- Hero  section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Order fried chicken now</h1>
+        <p>Get famous chicken however you want it.</p>
+        <a href="#menu" class="order-now-btn">Order now</a>
+      </div>
+      <video autoplay loop muted src="./src/assets/videos/hero-video.mp4" type="video/mp4"></video>
+    </section>
+    
+    <!-- Menu  section -->
+    <section id="menu" class="menu">
+      <h2>- Menu -</h2>
+      <p class="menu-description">Discover our famous dishes! Get the best fried chicken with 20% OFF on milkshakes. Limited time offer!</p>
+      <div class="menu-items"></div>
+      <p>Menu varies by location. Please contact your local restaurant to verify menu availability.</p>
+      <div class="total-price">
+        Total: $<span id="total-amount">0.00</span>
+      </div>
+    </section>
+    
+    <!-- Location  section -->
+    <section id="location" class="location">
+      <h2>New Los Pollos Hermanos restaurant in Madrid!</h2>
+      <div id="map"></div>
+      <button id="open-maps" onclick="window.open('https://www.google.com/maps?q=C.+de+Valenzuela,+4,+Retiro,+28014+Madrid,+España', '_blank')">Get directions</button>
+      <p>The first establishment in Spain to incorporate the new
+        company image. The restaurants sporting the new image
+        have been warmly welcomed by the public, with growth
+        above 30% in those premises with the new Los Pollos
+        Hermanos identity.
+      </p>
+      <p>Los Pollos Hermanos, flagship brand of Eat Out restoration
+        group, announced the opening its first restaurant in Madrid, at
+        Puerta de Alcalá
+      </p>
+    </section>
+    
+    <!-- Footer and partners  section -->
+    <footer class="footer">
+      <div class="partners">
+          <a href="https://www.feverup.com" target="_blank" class="partners-link">
+            <div class="partners-item">
+              <h3>In Partnership With</h3>
+              <img src="./src/assets/images/general/fever-logo.svg" alt="Fever Logo">
+            </div>
+        </a>
+          
+          <div class="partners-item">
+              <h3>Event By</h3>
+              <img src="./src/assets/images/header/lph-logo.png" alt="LPH Logo">
+          </div>
+      </div>
+        <p>
+          &copy; 2022 LPH / Los Pollos Hermanos. All Rights Reserved. Los Pollos Hermanos is an original license.
+          <a href="#">Privacy policy</a>
+      </p>
+    </footer>
+
+    <!-- Do not edit below this line -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

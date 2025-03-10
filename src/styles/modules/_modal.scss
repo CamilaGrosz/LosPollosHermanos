@@ -1,0 +1,135 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);  
+    font-weight: bold;
+
+    .modal-content {
+        background-color: $c-orange;
+        border-radius: 8px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        width: 90%;
+        max-width: 400px; 
+        padding: 20px; 
+        box-sizing: border-box;  
+    }
+
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: $c-primary; 
+        cursor: pointer;
+    }
+
+    h2 {
+        font-family: $f-montserrat;
+        font-size: 2rem;
+        color: $c-primary;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px;
+    }
+
+    li {
+        font-family: $f-roboto;
+        font-size: 1rem;
+        color: $c-white;
+        padding: 10px;
+        border-bottom: 1px solid $c-white-off;
+        text-align: left;
+    }
+
+    p {
+        font-family: $f-roboto;
+        font-size: 1.2rem;
+        color: $c-white;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    button {
+        background-color: $c-primary;
+        color: $c-white;
+        font-family: $f-montserrat;
+        font-size: 1rem;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: $c-secondary;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .modal-content {
+            width: 85%;
+            max-width: 360px; 
+            padding: 15px;  
+        }
+
+        h2 {
+            font-size: 1.8rem; 
+        }
+
+        li {
+            font-size: 0.9rem; 
+        }
+
+        p {
+            font-size: 1rem;  
+        }
+
+        button {
+            font-size: 0.9rem;  
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .modal-content {
+            width: 90%;
+            max-width: 300px;  
+            padding: 15px;  
+        }
+
+        h2 {
+            font-size: 1.6rem;  
+            margin-bottom: 10px;  
+        }
+
+        li {
+            font-size: 0.8rem;  
+            padding: 8px;  
+        }
+
+        p {
+            font-size: 0.9rem; 
+            margin-bottom: 10px; 
+        }
+
+        button {
+            font-size: 0.9rem;  
+            padding: 8px 16px;  
+        }
+    }
+}
